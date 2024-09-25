@@ -16,7 +16,7 @@ COPY root /
 RUN /bin/bash /build-setup.sh
 
 VOLUME /storage
-EXPOSE 8080
+EXPOSE 80
 
 HEALTHCHECK --timeout=5s \
     CMD curl --silent --fail-with-body http://localhost:8080/health.php || exit 1
